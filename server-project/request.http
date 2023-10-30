@@ -1,0 +1,131 @@
+###
+POST http://localhost:3100/api/v1/users/new-user HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstname": "test1",
+    "lastname": "test",
+    "email": "test@test1.com",
+    "current_password": "user123"
+}
+
+###
+GET http://localhost:3100/api/v1/users HTTP/1.1
+###
+GET http://localhost:3100/api/v1/users/6515d41808851311b9f957ec HTTP/1.1
+###
+PATCH  http://localhost:3100/api/v1/users/6511f37374aa938417bd7f5d HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstname": "Test Uno v1",
+    "lastname": "Test Uno "
+}
+###
+PUT   http://localhost:3100/api/v1/users/6511f37374aa938417bd7f5d HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstname": "Perro",
+    "lastname": "Perez "
+}
+
+###
+DELETE http://localhost:3100/api/v1/users/6515d41808851311b9f957ec HTTP/1.1
+
+
+###
+POST http://localhost:3100/api/v1/services/new-service HTTP/1.1
+Content-Type: application/json
+
+{
+    "service_name": "Servicio Uno",
+    "service_description": "Servicio Uno "
+}
+
+###
+GET http://localhost:3100/api/v1/services HTTP/1.1
+###
+GET http://localhost:3100/api/v1/services/6515d41808851311b9f957ec HTTP/1.1
+###
+PATCH  http://localhost:3100/api/v1/services/6511f37374aa938417bd7f5d HTTP/1.1
+Content-Type: application/json
+
+{
+    "service_name": "Servicio Uno",
+    "service_description": "Servicio Uno "
+}
+###
+PUT   http://localhost:3100/api/v1/services/6511f37374aa938417bd7f5d HTTP/1.1
+Content-Type: application/json
+
+{
+    "service_name": "Servicio Uno",
+    "service_description": "Servicio Uno "
+}
+
+###
+DELETE http://localhost:3100/api/v1/services/6515d41808851311b9f957ec HTTP/1.1
+
+###
+POST http://localhost:3100/api/v1/auth/signin HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstname": "Majho1",
+    "lastname": "Majho1",
+    "email": "majho3@gmail.com",
+    "current_password": "user123"
+}
+
+###
+POST http://localhost:3100/api/v1/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "majho3@gmail.com",
+    "current_password": "user123"
+}
+
+###
+GET http://localhost:3100/api/v1/auth/get-me/6536cdee11707333194ff083 HTTP/1.1
+
+
+
+###
+POST http://localhost:3100/api/v1/concesionario/new-con HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Concesionario 1",
+    "direccion": "calle c2"
+}
+
+###
+GET http://localhost:3100/api/v1/concesionario/ HTTP/1.1
+###
+GET http://localhost:3100/api/v1/concesionario/ HTTP/1.1
+
+
+
+
+###
+POST http://localhost:3100/api/v1/vehiculo/new HTTP/1.1
+Content-Type: application/json
+
+{
+    "estado": true,
+    "marca": "pegout",
+    "modelo": "2010",
+    "cilindraje": "1200",
+    "color": "Rojo",
+    "disponibilidad": true,
+    "concesionarioId": "653b1cf6734653a7d264509a"
+}
+
+###
+GET http://localhost:3100/api/v1/vehiculo/653b1ce6734653a7d2645098/vehiculos HTTP/1.1
+###
+GET http://localhost:3100/api/v1/vehiculo/653b1dd45b0d765eeb33fea9 HTTP/1.1
+
+
