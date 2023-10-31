@@ -16,7 +16,7 @@ Typography,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-export const UsersLogin = () => {
+export const Login = () => {
 const [users, setUsers] = useState([]); // Inicializa el estado con un array vacío
 
     const url = "http://localhost:3100/api/v1/users";
@@ -110,58 +110,7 @@ const [users, setUsers] = useState([]); // Inicializa el estado con un array vac
     return (
         
         <div className="body-registro">
-            <div className="container-registro">
-            <Box
-        component="form"
-        sx={{
-        display: "flex",
-        flexDirection: "column",
-    }}
-    onSubmit={handleSubmit}
-    >
-    <Typography variant="h5" align="center" style={{ marginBottom:'20px'}}>
-        <h2>Login</h2>
-    </Typography>
-
-    <TextField
-        type="text"
-        name="email"
-        value={formData.email}
-        onChange={handleInputChange}
-        placeholder="Correo electronico"
-        required
-        style={{ marginBottom:'20px'}}
-    />
-
-<TextField
-        type="text"
-        name="current_password"
-        value={formData.current_password}
-        onChange={handleInputChange}
-        placeholder="Contraseña"
-        required
-        style={{ marginBottom:'20px'}}
-    />
-
-    <div className="botones">
-    <Button  variant="contained" type="submit" style={{ width: '300px', marginLeft: '20px'}} color='primary' >
-        Entrar
-    </Button>
-    <Button variant="contained" type="submit" style={{ width: '300px', marginLeft: '50px'}} color='error' >
-        Cancelar
-    </Button>
-    </div>
-
-    </Box>
-    </div>
-    
-
-    {/*         <h1>Lista de Usuarios</h1>
-            <ul>
-                {users.map((user) => (
-                    <Typography variant="h6">Usuarios: {user.firstname} , {user.lastname}, {user.email}, {user.current_password}</Typography>
-                ))}
-            </ul> */}
+            Bienvend@ {formData.email} 
         </div>
     );
     };

@@ -10,12 +10,12 @@ pass: 'nsgr qwgk nrqz pcdm',
 },
 });
 
-function sendConfirmationEmail(email, confirmationLink) {
+function sendConfirmationEmail(email) {
 const mailOptions = {
 from: 'juanesbrice977@gmail.com',
 to: email,
 subject: 'Confirma tu correo electrónico',
-html: `Haz clic en este <a href="https://www.youtube.com/">enlace</a> para confirmar tu correo electrónico.`,
+html: `Haz clic en este <a href="http://localhost:3000/UsersLogin"> CLICK AQUI </a> para confirmar tu correo electrónico.`,
 };
 
 transporter.sendMail(mailOptions, (error, info) => {
@@ -34,7 +34,7 @@ const createUser = async (req, res) => {
         const newUser = new userModel({ ...userData });
         console.log(newUser);
         await newUser.save();
-        sendConfirmationEmail(newUser.email, );
+        sendConfirmationEmail(newUser.email);
         res.status(201).json(newUser);
     } catch (err) {
         res.status(400).json({ message: err.message })
