@@ -7,7 +7,7 @@ router.post('/new-user',userController.createUser);
 //http://localhost:3100/api/v1/users
 router.get('/',userController.getAllUsers);
 //http://localhost:3100/api/v1/users?id=""""
-router.get('/:id',userController.getUserById);
+router.get('/:email/:password', userController.getUserById);
 //http://localhost:3100/api/v1/users?id=""""
 router.patch('/:id',userController.updateUserById);
 //http://localhost:3100/api/v1/users?id=""""

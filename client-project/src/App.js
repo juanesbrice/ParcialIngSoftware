@@ -1,6 +1,6 @@
 import { Users } from "./components/Users/users";
 import { UsersLogin } from "./components/Users/usersLogin";
-import { Login } from "./components/Users/Login";
+import { Init } from "./components/Users/Init";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import {
 Box,
@@ -36,9 +36,12 @@ function App() {
         </Button>
         </Link>
 
+        <Link to={"/Init"}></Link>
+
         <Routes>
           <Route path="/" element={<Users/>} />
           <Route path="/UsersLogin" element={<UsersLogin />} />
+          <Route path="/Init" element={<Init />} />
         </Routes>
       </div>
     </Router>

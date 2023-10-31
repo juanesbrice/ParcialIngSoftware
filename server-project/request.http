@@ -11,9 +11,10 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3100/api/v1/users HTTP/1.1
+GET http://localhost:3100/api/v1/users/juanesbrice977@gmail.com/juanito HTTP/1.1
+
 ###
-GET http://localhost:3100/api/v1/users/6515d41808851311b9f957ec HTTP/1.1
+GET http://localhost:3100/api/v1/users HTTP/1.1
 ###
 PATCH  http://localhost:3100/api/v1/users/6511f37374aa938417bd7f5d HTTP/1.1
 Content-Type: application/json
@@ -32,5 +33,5 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3100/api/v1/users/65409336c34a783d113a93cc HTTP/1.1
+DELETE http://localhost:3100/api/v1/users/6540aee08776d2cf666eb891 HTTP/1.1
 
