@@ -1,5 +1,32 @@
 const userModel = require('../models/user');
 
+const nodemailer = require('nodemailer');
+
+const transporter = nodemailer.createTransport({
+service: 'Gmail',
+auth: {
+user: 'juanesbrice977@gmail.com',
+pass: 'nsgr qwgk nrqz pcdm',
+},
+});
+
+function sendConfirmationEmail(email, confirmationLink) {
+const mailOptions = {
+from: 'juanesbrice977@gmail.com',
+to: email,
+subject: 'Confirma tu correo electrónico',
+html: `Haz clic en este <a href="https://www.youtube.com/">enlace</a> para confirmar tu correo electrónico.`,
+};
+
+transporter.sendMail(mailOptions, (error, info) => {
+if (error) {
+    console.error('Error al enviar el correo de confirmación:', error);
+} else {
+    console.log('Correo de confirmación enviado:', info.response);
+}
+});
+}
+
 const createUser = async (req, res) => {
     try {
         const userData = req.body;
@@ -7,6 +34,7 @@ const createUser = async (req, res) => {
         const newUser = new userModel({ ...userData });
         console.log(newUser);
         await newUser.save();
+        sendConfirmationEmail(newUser.email, );
         res.status(201).json(newUser);
     } catch (err) {
         res.status(400).json({ message: err.message })

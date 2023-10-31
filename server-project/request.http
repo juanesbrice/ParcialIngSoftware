@@ -32,5 +32,5 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3100/api/v1/users/65404c075ca3e53afabe94fd HTTP/1.1
+DELETE http://localhost:3100/api/v1/users/65408a2cc34a783d113a93aa HTTP/1.1
 

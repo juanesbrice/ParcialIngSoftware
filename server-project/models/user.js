@@ -11,7 +11,6 @@ const UserSchema = mongoose.Schema({
     email : {
         type: String,
         require: true,
-        unique:true,
     },
     telephone_number:{
         type: String,
@@ -22,6 +21,11 @@ const UserSchema = mongoose.Schema({
         type: String,
         require: true,
     },
+    active: {
+        type: Boolean,
+        require: true,
+        default: false
+    }
 });
 const User =  mongoose.model("User",UserSchema);
 module.exports = User;
