@@ -13,24 +13,14 @@ const UserSchema = mongoose.Schema({
         require: true,
         unique:true,
     },
-    role:{
+    telephone_number:{
         type: String,
-        default:"user",
-    },
-    active:{
-        type: Boolean,
-        default:true,
+        require: true,
+        unique: true
     },
     current_password : {
         type: String,
         require: true,
-    },
-    avatar : {
-        type: String,
-    },
-    create_at : {
-        type: Date,
-        default: Date.now,
     },
 });
 const User =  mongoose.model("User",UserSchema);

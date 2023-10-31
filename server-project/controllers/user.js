@@ -65,15 +65,3 @@ module.exports = {
 
 
 
-
-/* const create = function(){}; //Anonima
-
-function createUser() { //Estandar
-    // const user = new userModel({
-    //     firstname: "",
-    //     lastname: "",
-    //     email: "",
-    //     current_password: "",
-    //     avatar: ""
-    // })
-}; */
